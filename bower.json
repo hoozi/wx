@@ -1,0 +1,22 @@
+{
+  "name": "wx",
+  "authors": [
+    "AngryPanda <287036406@qq.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "lodash": "^4.17.11",
+    "jquery": "^3.3.1",
+    "jquery-weui": "^1.2.1"
+  }
+}
