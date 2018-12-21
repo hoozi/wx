@@ -3225,17 +3225,20 @@ if (typeof define === 'function' && define.amd) {
     var buttons = params.buttons;
 
     var buttonsHtml = buttons.map(function(d, i) {
-      return '<a href="javascript:;" class="weui-dialog__btn ' + (d.className || "") + '">' + d.text + '</a>';
+      return '<a href="javascript:;" class="weui-dialog__btn external ' + (d.className || "") + '">' + d.text + '</a>';
     }).join("");
 
-    var tpl = '<div class="weui-dialog">' +
+    var tpl = '<div class="weui-dialog '+ params.className +'">' +
+                ( params.closeButton ?  params.closeButton : '') + 
                 '<div class="weui-dialog__hd"><strong class="weui-dialog__title">' + params.title + '</strong></div>' +
                 ( params.text ? '<div class="weui-dialog__bd">'+params.text+'</div>' : '')+
                 '<div class="weui-dialog__ft">' + buttonsHtml + '</div>' +
               '</div>';
     
     var dialog = $.openModal(tpl, onOpen);
-
+    dialog.find('.iconfont').click(function(e){
+        if(params.autoClose) $.closeModal();
+    })
     dialog.find(".weui-dialog__btn").each(function(i, e) {
       var el = $(e);
       el.click(function() {
@@ -3833,7 +3836,7 @@ if (typeof define === 'function' && define.amd) {
   "use strict";
 
   var ITEM_ON = "weui-bar__item--on";
-
+  
   var showTab = function(a) {
     var $a = $(a);
     if($a.hasClass(ITEM_ON)) return;
@@ -3860,6 +3863,8 @@ if (typeof define === 'function' && define.amd) {
     if(!/^#/.test(href)) return;
 
     e.preventDefault();
+
+    
 
     showTab($a);
   });

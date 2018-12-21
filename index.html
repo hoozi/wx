@@ -6,13 +6,194 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/weui.min.css">
-  <link rel="stylesheet" href="css/wx.css">
-  <title>Document</title>
-</head>
+  <link rel="stylesheet" href="skin/wx.css">
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_970800_c0twgoryv7c.css">
+  <title>两微活动-首页</title>
+</head> 
 <body>
+<div class="page-container">
+<div class="page page--tabbar page-current" id='home' data-title="首页">
+  <div class="swiper-container" data-space-between='10' data-pagination='.swiper-pagination' data-autoplay="1000">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="assets/b1.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="assets/b1.jpg" alt=""></div>
+    </div>
+    <div class="swiper-pagination swiper-pagination-bullets"></div>
+  </div>
+  <div class="section">
+    <div class="weui-grids">
+      <a href="project.html" class="weui-grid js_grid external">
+        <div class="weui-grid__icon">
+          <i class="icon icon-g1"></i>
+        </div>
+        <p class="weui-grid__label">
+          项目管理
+        </p>
+      </a>
+      <a href="preview-project.html" class="weui-grid js_grid external">
+        <div class="weui-grid__icon">
+          <i class="icon icon-g2"></i>
+        </div>
+        <p class="weui-grid__label">
+          项目速览
+        </p>
+      </a>
+      <a href="iwish.html" class="weui-grid js_grid external">
+        <div class="weui-grid__icon">
+          <i class="icon icon-g3"></i>
+        </div>
+        <p class="weui-grid__label">
+          i微心愿
+        </p>
+      </a>
+      <a href="" class="weui-grid js_grid external">
+        <div class="weui-grid__icon">
+          <i class="icon icon-g4"></i>
+        </div>
+        <p class="weui-grid__label">
+          行益联洋
+        </p>
+      </a>
+      <a href="" class="weui-grid js_grid external">
+        <div class="weui-grid__icon">
+          <i class="icon icon-g5"></i>
+        </div>
+        <p class="weui-grid__label">
+          服务菜单
+        </p>
+      </a>
+      <a href="javascript:;" class="weui-grid js_grid external" id="J_more">
+        <div class="weui-grid__icon">
+          <i class="icon icon-g6"></i>
+        </div>
+        <p class="weui-grid__label">
+          更多内容
+        </p>
+      </a>
+    </div>
+  </div>
+  <div class="section">
+    <div class="section-header weui-flex border-bottom">
+      <div class="section-header__title weui-flex__item">最新活动</div>
+      <div class="section-header__extra weui-flex__item">
+        <a href="javascript:;">查看更多<i class="iconfont icon-wx-right"></i></a>
+      </div>
+    </div>
+    <div class="section-body">
+      <a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg">
+        <div class="weui-media-box__bd">
+          <p class="weui-media-box__desc">丽水市新闻业务知识讲座在丽水日报...</p>
+        </div>
+        <div class="weui-media-box__hd">
+          <img class="weui-media-box__thumb" src="assets/it.jpg">
+        </div>
+      </a>
+      <a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg">
+        <div class="weui-media-box__bd">
+          <p class="weui-media-box__desc">闻叶义斌段金柱7日晚,2018“宜夏”榕城文化艺术季闭幕演出暨“海丝星空”...</p>
+        </div>
+        <div class="weui-media-box__hd">
+          <img class="weui-media-box__thumb" src="assets/it.jpg">
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="section">
+    <div class="section-header weui-flex border-bottom">
+      <div class="section-header__title weui-flex__item">我的心愿</div>
+      <div class="section-header__extra weui-flex__item">
+        <a href="javascript:;">查看更多<i class="iconfont icon-wx-right"></i></a>
+      </div>
+    </div>
+    <div class="section-body">
+      <a href="javascript:;" class="weui-cell wish">
+        <div class="weui-cell__bd">
+          <p>我有一个很大的梦想</p>
+        </div>
+        <div class="weui-cell__ft">2018-11-15</div>
+      </a>
+      <a href="javascript:;" class="weui-cell wish">
+        <div class="weui-cell__bd">
+          <p>我有一个很大的梦想</p>
+        </div>
+        <div class="weui-cell__ft">2018-11-15</div>
+      </a>
+      <a href="javascript:;" class="weui-cell wish">
+        <div class="weui-cell__bd">
+          <p>我有一个很大的梦想</p>
+        </div>
+        <div class="weui-cell__ft">2018-11-15</div>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="page page--tabbar" id='find' data-title="发现">
+  <header class="bar bar-nav">
+    <h1 class='title'>发现</h1>
+  </header>
+  <div class="content">
+    <div class="content-block">
+      <ul>
+        <li><a href="/docs-demos/router2">ajax加载新页面</a></li>
+        <li><a href="#router3">内联的新页面</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="page page--tabbar" id='account' data-title="我的">
+  <header class="bar bar-nav">
+    <h1 class='title'>我的</h1>
+  </header>
+  <div class="content">
+    <div class="content-block">
+      <ul>
+        <li><a href="/docs-demos/router2">ajax加载新页面</a></li>
+        <li><a href="#router3">内联的新页面</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+<div class="weui-tabbar border-top weui-tabbar--fixed">
+  <a href="#home" class="weui-tabbar__item weui-bar__item--on no-transition">
+    <div class="weui-tabbar__icon">
+      <i class="icon icon-home"></i>
+    </div>
+    <p class="weui-tabbar__label">首页</p>
+  </a>
+  <a href="#find" class="weui-tabbar__item no-transition">
+    <div class="weui-tabbar__icon">
+      <i class="icon icon-compass"></i>
+    </div>
+    <p class="weui-tabbar__label">发现</p>
+  </a>
+  <a href="#account" class="weui-tabbar__item no-transition">
+    <div class="weui-tabbar__icon">
+      <i class="icon icon-user"></i>
+    </div>
+    <p class="weui-tabbar__label">我的</p>
+  </a>
+</div>
+<script src="js/lib/jquery-weui/fastclick.js"></script>
 <script src="js/lib/jquery/dist/jquery.min.js"></script>
-<script src="js/lib/jquery-weui/jquery-weui.min.js"></script>
+<script src="js/lib/jquery-weui/jquery-weui.js"></script>
+<script src="js/lib/jquery-weui/swiper.min.js"></script>
 <script src="js/router.js"></script>
+<script src="js/common.js"></script>
+<script>
+  $(".swiper-container").swiper({
+    loop: true,
+    autoplay: 3000
+  });
+  $('#J_more').on('click',
+  function(){
+    $.modal({
+      title: '<img src="assets/nocontent.png"/>',
+      text: '<span class="text">暂时没有更多内容!</span>',
+      className: 'wx-modal',
+      closeButton: '<i class="iconfont icon-wx-close-circle-fill"></i>'
+    });
+  })
+</script>
 </body>
 </html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="skin/wx.css">
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_970800_c0twgoryv7c.css">
+  <title>微心愿展示</title>
+</head>
+<body>
+<div class="page page-white" id="iwish-info" data-title="微心愿展示">
+  <div class="preview-item border-bottom">
+    <div class="preview-item__body">
+      <ul class="preview-item__list">
+        <li>
+          <span><i class="iconfont icon-wx-gift-fill"></i> 心愿编号101</span>
+          <span><i class="iconfont icon-wx-safetycertificate-f"></i> 申请人：王茹</span>
+        </li>
+        <li>
+          <span><i class="iconfont icon-wx-time-circle-fill"></i> 申请人时间：2018-12-1  16：00</span>
+        </li>
+        <li>
+          <span><i class="iconfont icon-wx-shopping-fill"></i> 申请人职业：职业经理人</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="preview-item border-bottom">
+    <div class="preview-item__header">
+      <h2 class="preview-item__title">我的故事</h2>
+      <span>申请人职业：职业经理人</span>
+    </div>
+    <div class="preview-item__body">
+      <div class="textarea-text">我们用10年的建站经验，打造出适合中小企业的高端企业网站系统精致的设计，人性化的后台，让WEB成为您建站的首选。WEB企业版是网站旗下最新研发的针对于中小型企业网站系统，团队有多年丰富的建站经验，了解最新网站体验及交互原则，尽可能的为用户考虑集功能、操作、体验交互一体化的专业网站系统。</div>
+    </div>
+  </div>
+  <div class="preview-item">
+    <div class="preview-item__header">
+      <h2 class="preview-item__title">我的心愿</h2>
+    </div>
+    <div class="preview-item__body">
+      <div class="textarea-text">我们用10年的建站经验，打造出适合中小企业的高端企业网站系统精致的设计，人性化的后台，让WEB成为您建站的首选。WEB企业版是网站旗下最新研发的针对于中小型企业网站系统，团队有多年丰富的建站经验，了解最新网站体验及交互原则，尽可能的为用户考虑集功能、操作、体验交互一体化的专业网站系统。</div>
+    </div>
+  </div>
+  <div class="preview-item border-bottom">
+    <div class="preview-item__body">
+      <ul class="preview-item__list preview-item__list--important">
+        <li>
+          <span>认领人：王睿</span>
+          <span>认领人职业：医生</span>
+        </li>
+        <li>
+          <span>认领时间：2018-12-1  16：00</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<script src="js/lib/jquery-weui/fastclick.js"></script>
+<script src="js/lib/jquery/dist/jquery.min.js"></script>
+<script src="js/lib/jquery-weui/jquery-weui.js"></script>
+<script src="js/lib/jquery-weui/swiper.min.js"></script>
+<script src="js/router.js"></script>
+<script src="js/common.js"></script>
+<script>
+  var likeActive = 'has-like';
+  $('.J_like').on('click',
+  function(){
+    $(this).find('.icon-wx-like').toggleClass(likeActive);
+  })
+</script>
+</body>
+</html>

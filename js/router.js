@@ -115,7 +115,7 @@
       this.state.setItem("forward", "[]");  //clearforward
 
       var duplicatePage = $("#"+$(page)[0].id);
-
+      var pageTitle = $(page).data('title') || '';
       page.insertBefore($(".page")[0]);
 
       if(duplicatePage[0] !== page[0]) duplicatePage.remove(); //if inline mod, the duplicate page is current page
@@ -129,7 +129,7 @@
 
       this.forwardStack  = [];  //clear forward stack
       
-      this.animatePages(this.getCurrentPage(), page, null, noAnimation);
+      this.animatePages(this.getCurrentPage(), page, null, noAnimation, pageTitle);
     });
   }
 
@@ -143,7 +143,7 @@
     return this.loadPage(location.href, true, false, true);
   }
 
-  Router.prototype.animatePages = function (leftPage, rightPage, leftToRight, noTransition) {
+  Router.prototype.animatePages = function (leftPage, rightPage, leftToRight, noTransition, pageTitle) {
     var removeClasses = 'page-left page-right page-from-center-to-left page-from-center-to-right page-from-right-to-center page-from-left-to-center';
     if(noTransition) {
       if (!leftToRight) {
@@ -151,7 +151,7 @@
         leftPage.removeClass(removeClasses).removeClass('page-current');
         rightPage.removeClass(removeClasses).addClass("page-current");
         rightPage.trigger("pageInitInternal", [rightPage[0].id, rightPage]);
-
+        document.title = `${APP_NAME}${$(rightPage).data('title') ? '-'+$(rightPage).data('title') : ''}`
         if(rightPage.hasClass("no-tabbar")) {
           $(document.body).addClass("tabbar-hidden");
         } else {
@@ -169,6 +169,7 @@
         }
         rightPage.trigger("pageInitInternal", [leftPage[0].id, leftPage]);
       }
+      
     } else {
       if (!leftToRight) {
         rightPage.trigger("pageAnimationStart", [rightPage[0].id, rightPage]);
@@ -210,6 +211,7 @@
 
     function afterAnimation(page) {
       page.removeClass(removeClasses);
+      document.title = `${APP_NAME}${pageTitle ? '-'+pageTitle : ''}`
       page.trigger("pageAnimationEnd", [page[0].id, page]);
     }
 
@@ -396,13 +398,13 @@
 
     var router = $.router = new Router();
     router.defaults = Router.prototype.defaults;
-
     $(document).on("click", "a", function(e) {
       var $target = $(e.currentTarget);
       if($target.hasClass("external") ||
          $target[0].hasAttribute("external") ||
          $target.hasClass("tab-link") ||
          $target.hasClass("open-popup") ||
+         $target.attr('href').indexOf('javascript') !== -1 ||
          $target.hasClass("open-panel")
         ) return;
       e.preventDefault();
