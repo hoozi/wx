@@ -13,65 +13,86 @@
   <title>爱心捐赠</title>
 </head>
 <body>
-<div class="page page-white" id="donate" data-title="爱心捐赠">
-  <div class="form-item mpb0">
-    <div class="form-item__inner">
-      <input type="text" name="" id="date" data-options='{"type": "date"}' placeholder="请选择日期">
+<div class="page-container">
+  <div class="page page-white" id="donate" data-title="爱心捐赠">
+    <div class="form-item mpb0">
+      <div class="form-item__inner">
+        <input type="text" name="" id="date" readonly data-options='{"type": "date"}' placeholder="请选择日期">
+      </div>
     </div>
-  </div>
-  <div class="form-item">
-    <div class="form-item__inner">
-      <input type="text" name="" id="" placeholder="填写您的姓名">
+    <div class="form-item">
+      <div class="form-item__inner">
+        <input type="text" name="" id="" placeholder="填写您的姓名">
+      </div>
     </div>
-  </div>
-  <div class="form-item">
-    <h2 class="form-item__title mb24">捐赠金额</h2>
-    <div class="form-item__inner form-item__inner--isLine">
-      <i>¥</i>
-      <input type="number" name="" id="" placeholder="请输入捐赠金额">
+    <div class="form-item">
+      <h2 class="form-item__title mb24">捐赠金额</h2>
+      <div class="form-item__inner form-item__inner--isLine">
+        <i>¥</i>
+        <input type="number" name="" id="" placeholder="请输入捐赠金额">
+      </div>
+      <textarea rows="3" placeholder="(爱心留言) 请留下您的姓名,联系方式和您要想要对我们说的话谢谢."></textarea>
     </div>
-    <textarea rows="3" placeholder="(爱心留言) 请留下您的姓名,联系方式和您要想要对我们说的话谢谢."></textarea>
-  </div>
-  <div class="form-item">
-    <a href="#" class="btn btn-warning donate-btn open-popup" data-target="#donate-pop">确认捐赠</a>
+    <div class="form-item">
+      <a href="#" class="btn btn-warning donate-btn open-popup" data-target="#donate-pop">确认捐赠</a>
+    </div>
   </div>
 </div>
 <div id="donate-pop" class="donate-pop weui-popup__container popup-bottom" style="display: none;">
-    <div class="weui-popup__overlay"></div>
-    <div class="weui-popup__modal">
-      <div class="toolbar border-bottom">
-        <div class="toolbar-inner">
-          <a href="javascript:;" class="picker-button close-popup"><i class="iconfont icon-wx-close"></i></a>
-          <h1 class="title">确认付款</h1>
-        </div>
+  <div class="weui-popup__overlay"></div>
+  <div class="weui-popup__modal">
+    <div class="toolbar border-bottom">
+      <div class="toolbar-inner">
+        <a href="javascript:;" class="picker-button close-popup"><i class="iconfont icon-wx-close"></i></a>
+        <h1 class="title">确认付款</h1>
       </div>
-      <div class="modal-content">
-        <div class="modal__item mb64">
-          <h2><span>¥</span>5000</h2>
-        </div>
-        <div class="modal__item">
-          <div class="weui-cells">
-            <a class="weui-cell" href="javascript:;">
-              <div class="weui-cell__bd">
-                <p>订单信息</p>
-              </div>
-              <div class="weui-cell__ft">捐赠</div>
-            </a>
-            <a class="weui-cell weui-cell_access" href="javascript:;">
-              <div class="weui-cell__bd">
-                <p>付款方式</p>
-              </div>
-              <div class="weui-cell__ft">微信</div>
-            </a>
-          </div>
+    </div>
+    <div class="modal-content">
+      <div class="modal__item mb64">
+        <h2><span>¥</span>5000</h2>
+      </div>
+      <div class="modal__item">
+        <div class="weui-cells">
+          <a class="weui-cell" href="javascript:;">
+            <div class="weui-cell__bd">
+              <p>订单信息</p>
+            </div>
+            <div class="weui-cell__ft">捐赠</div>
+          </a>
+          <a class="weui-cell weui-cell_access" href="javascript:;">
+            <div class="weui-cell__bd">
+              <p>付款方式</p>
+            </div>
+            <div class="weui-cell__ft">微信</div>
+          </a>
         </div>
       </div>
     </div>
   </div>
+</div>
+<div class="weui-tabbar border-top weui-tabbar--fixed">
+  <a href="index.html#home" class="weui-tabbar__item external">
+    <div class="weui-tabbar__icon">
+      <i class="icon icon-home"></i>
+    </div>
+    <p class="weui-tabbar__label">首页</p>
+  </a>
+  <a href="index.html#find" class="weui-tabbar__item external">
+    <div class="weui-tabbar__icon">
+      <i class="icon icon-compass"></i>
+    </div>
+    <p class="weui-tabbar__label">发现</p>
+  </a>
+  <a href="index.html#account" class="weui-tabbar__item external">
+    <div class="weui-tabbar__icon">
+      <i class="icon icon-user"></i>
+    </div>
+    <p class="weui-tabbar__label">我的</p>
+  </a>
+</div>
 <script src="js/lib/jquery-weui/fastclick.js"></script>
 <script src="js/lib/jquery/dist/jquery.min.js"></script>
 <script src="js/lib/jquery-weui/jquery-weui.js"></script>
-<script src="js/lib/jquery-weui/swiper.min.js"></script>
 <script src="js/lib/mui/mui.min.js"></script>
 <script src="js/lib/mui/mui.picker.min.js"></script>
 <script src="js/router.js"></script>

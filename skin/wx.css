@@ -1973,7 +1973,7 @@ button.swiper-pagination-bullet {
   height: 0;
   width: 100%;
   height: 100%;
-  z-index: 10;
+  z-index: 12;
 }
 .weui-popup__overlay {
   background-color: rgba(0, 0, 0, 0.6);
@@ -2402,7 +2402,7 @@ p {
   box-sizing: border-box;
 }
 .page.page--tabbar {
-  height: 100%;
+  min-height: 100%;
   position: relative;
 }
 .page-white {
@@ -3004,9 +3004,15 @@ a.wish:active {
   width: 100%;
   height: 3.2rem /* 240/75 */;
   background: url('../assets/bg.gif') no-repeat top center;
+  background-color: #efae22;
   background-size: cover;
   color: #fff;
   padding:.64rem /* 48/75 */ .56rem /* 42/75 */;
+}
+.account {
+  background: url('../assets/abg.jpg') no-repeat bottom center;
+  padding: 0;
+  height:3.64rem /* 273/75 */;
 }
 .pay h2{
   font-size: .4267rem /* 32/75 */;
@@ -3266,4 +3272,74 @@ a.wish:active {
 }
 .new-jz .weui-cell__ft {
   text-align: left;
+}
+.account {
+  padding-top: .64rem /* 48/75 */;
+}
+.account-card {
+  background-color: #fff;
+  box-shadow: 0 3px 10px rgba(0,0,0,.12);
+  width: 90%;
+  height: 2.6667rem /* 200/75 */;
+  margin: 0 auto;
+  border-radius: 3px;
+}
+.login-before {
+  padding: 0 .64rem /* 48/75 */;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  height: 100%;
+}
+.login-before .user-info {
+  line-height: 1.6rem /* 120/75 */;
+  vertical-align: middle;
+}
+.login-before .user-info span {
+  display: inline-block;
+  color: rgba(0,0,0,.9);
+  font-size: .4rem /* 30/75 */;
+  margin-left: .2133rem /* 16/75 */;
+}
+.login-before .user-info img {
+  vertical-align: middle;
+  display: inline-block;
+  width: 1.6rem /* 120/75 */;
+  height: 1.6rem /* 120/75 */;
+}
+.login-before button {
+  height: .6933rem /* 52/75 */;
+  line-height: .6933rem /* 52/75 */;
+}
+.account-list {
+  width:90%;
+  margin:0 auto;
+  border-radius: 3px;
+  box-shadow: 0 3px 10px rgba(0,0,0,.12);
+}
+.account-list .weui-cells {
+  border-radius: 3px;
+}
+.account-list .weui-cells .weui-cell__bd p {
+  font-size: .3467rem /* 26/75 */;
+  color: rgba(0,0,0,.9);
+}
+.account-list .weui-cells .weui-cell__bd p i {
+  font-size: .3467rem /* 26/75 */;
+}
+.account-list .weui-cells:before,
+.account-list .weui-cells:after {
+  border:0;
+}
+.account-list .weui-cells .weui-cell__bd .icon-wx-heart {
+  color: #efae22;
+}
+.account-list .weui-cells .weui-cell__bd .icon-wx-audit {
+  color: #4ddbb8;
+}
+.account-list .weui-cells .weui-cell__bd .icon-wx-safetycertificate {
+  color: #1296db
+}
+.account-list .weui-cells .weui-cell__bd .icon-wx-like {
+  color: #efae22;
 }

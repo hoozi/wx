@@ -14,99 +14,43 @@
 </head>
 <body>
 <div class="page" id="account" data-title="我的">
-  <div class="pay">
-    
-  </div>
-  <div class="weui-tab pay-tab">
-    <div class="weui-tabbar">
-      <a href="#tab1" class="weui-tabbar__item weui-bar__item--on external">
-        <p class="weui-tabbar__label">基金所有收入</p>
-      </a>
-      <a href="#tab2" class="weui-tabbar__item external">
-        <p class="weui-tabbar__label">基金所有支出</p>
-      </a>
+  <div class="pay account">
+    <div class="account-card">
+      <div class="login-before">
+        <div class="user-info">
+          <img src="assets/avatar.gif" alt="">
+          <span>未登录</span>
+        </div>
+        <button class="btn btn-warning">登录/注册</button>
+      </div>
     </div>
-    <div class="weui-tab__bd">
-      <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active">
-        <div class="section">
-          <div class="picker-item">
-            <div class="picker-item__btn">
-              <div class="picker-item__value">
-                <i class="iconfont icon-wx-time-circle"></i>
-                选择时间
-              </div>
-              <i class="iconfont icon-wx-down"></i>
-            </div>
-          </div>
-          <div class="picker-item">
-            <div class="picker-item__btn">
-              <div class="picker-item__value">
-                <i class="iconfont icon-wx-heart"></i>
-                捐赠类型
-              </div>
-              <i class="iconfont icon-wx-down"></i>
-            </div>
-          </div>
-          <div class="picker-item">
-            <div class="picker-item__btn">
-              <div class="picker-item__value">
-                <i class="iconfont icon-wx-unorderedlist"></i>
-                收支类型
-              </div>
-              <i class="iconfont icon-wx-down"></i>
-            </div>
-          </div>
-          <div class="picker-item">
-            <div class="picker-item__btn">
-              <div class="picker-item__value">
-                <i class="iconfont icon-wx-upload"></i>
-                支出项目
-              </div>
-              <i class="iconfont icon-wx-down"></i>
-            </div>
-          </div>
+  </div>
+  <div class="account-list">
+    <div class="weui-cells">
+      <a class="weui-cell weui-cell_access" href="javascript:;">
+        <div class="weui-cell__bd">
+          <p><i class="iconfont icon-wx-heart"></i> 我的捐赠项目</p>
         </div>
-      </div>
-      <div id="tab2" class="weui-tab__bd-item">
-        <div class="section">
-          <div class="picker-item">
-            <div class="picker-item__btn">
-              <div class="picker-item__value">
-                <i class="iconfont icon-wx-time-circle"></i>
-                选择时间
-              </div>
-              <i class="iconfont icon-wx-down"></i>
-            </div>
-          </div>
-          <div class="picker-item">
-            <div class="picker-item__btn">
-              <div class="picker-item__value">
-                <i class="iconfont icon-wx-heart"></i>
-                捐赠类型
-              </div>
-              <i class="iconfont icon-wx-down"></i>
-            </div>
-          </div>
-          <div class="picker-item">
-            <div class="picker-item__btn">
-              <div class="picker-item__value">
-                <i class="iconfont icon-wx-unorderedlist"></i>
-                收支类型
-              </div>
-              <i class="iconfont icon-wx-down"></i>
-            </div>
-          </div>
-          <div class="picker-item">
-            <div class="picker-item__btn">
-              <div class="picker-item__value">
-                <i class="iconfont icon-wx-upload"></i>
-                支出项目
-              </div>
-              <i class="iconfont icon-wx-down"></i>
-            </div>
-          </div>
+        <div class="weui-cell__ft"></div>
+      </a>
+      <a class="weui-cell weui-cell_access" href="javascript:;">
+        <div class="weui-cell__bd">
+          <p><i class="iconfont icon-wx-audit"></i> 我申请的心愿</p>
         </div>
-      </div>
+        <div class="weui-cell__ft"></div>
+      </a>
+      <a class="weui-cell weui-cell_access" href="javascript:;">
+        <div class="weui-cell__bd">
+          <p><i class="iconfont icon-wx-safetycertificate"></i> 我认领的心愿</p>
+        </div>
+        <div class="weui-cell__ft"></div>
+      </a>
+      <a class="weui-cell weui-cell_access" href="javascript:;">
+        <div class="weui-cell__bd">
+          <p><i class="iconfont icon-wx-like"></i> 我推荐的项目</p>
+        </div>
+        <div class="weui-cell__ft"></div>
+      </a>
     </div>
   </div>
 </div>
